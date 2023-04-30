@@ -3,6 +3,7 @@ import telephone from "./images/telephone.svg";
 import Logo from "./images/Logo.svg";
 import Sms from "./images/sms.svg";
 import burger from "./images/menu.svg";
+import eks from './images/eks.svg'
 import "./Navbar.scss";
 import { useState } from "react";
 const Navbar = () => {
@@ -24,7 +25,7 @@ console.log(minu)
             <NavLink className='nav__logo'>
               <img src={Logo} alt='logo' />
             </NavLink>
-            <div className='nav__main d-none d-xl-flex  align-items-center '>
+            <div className='nav__main d-none d-xxl-flex  align-items-xl-center '>
               <NavLink className='text-decoration-none nav__main--link'>
                 Главная
               </NavLink>
@@ -40,37 +41,41 @@ console.log(minu)
             </div>
           </div>
           <div className='nav__link d-flex align-items-center'>
-            <NavLink className='text-decoration-none nav__link--item'>
+            <NavLink className='text-decoration-none d-flex  align-items-center nav__link--item'>
               <img className='nav__link--png' src={Sms} alt='sms' />
-              <span className='nav__link--text text-decoration-none'>
+              <span className='nav__link--text d-none d-lg-block text-decoration-none'>
                 mail@yandex.ru
               </span>
             </NavLink>
-            <NavLink className='text-decoration-none nav__link--item'>
+            <NavLink className='text-decoration-none d-flex align-items-center nav__link--item'>
               <img className='nav__link--png' src={telephone} alt='sms' />
-              <span
-                to='tel:998919509001'
-                className='nav__link--text text-decoration-none'>
+              <span className='nav__link--text d-none d-lg-block text-decoration-none'>
                 +7 (919) 714-25-00
               </span>
             </NavLink>
-            <button type='submit' className='nav__btn d-block border-0'>
-              Заказать звонок
+            <button type='submit' className='nav__btn  border-0'>
+              <p className="d-none d-lg-block m-0"> Заказать звонок</p>
+              <p className="d-block d-lg-none m-0">Обратная связь</p>
             </button>
           </div>
           <div className='bg'></div>
           {minu ? (
-            <div className='nav__main d-block d-xl-none  align-items-center '>
-              <NavLink className='text-decoration-none d-block nav__main--link'>
+            <div className='nav__main bground d-block d-xl-none  align-items-center '>
+              <button
+                onClick={minuFun}
+                className='border-0 bg-transparent text-light  minu-btn  mt-5'>
+                <img src={eks} alt='eks' />
+              </button>
+              <NavLink className='text-decoration-none bground__item  item1 text-light d-block nav__main--link'>
                 Главная
               </NavLink>
-              <NavLink className='text-decoration-none d-block nav__main--link'>
+              <NavLink className='text-decoration-none bground__item  text-light d-block nav__main--link'>
                 Квартиры
               </NavLink>
-              <NavLink className='text-decoration-none d-block nav__main--link'>
+              <NavLink className='text-decoration-none bground__item  text-light d-block nav__main--link'>
                 Контакты
               </NavLink>
-              <NavLink className='text-decoration-none d-block nav__main--link'>
+              <NavLink className='text-decoration-none bground__item  text-light d-block nav__main--link'>
                 О нас
               </NavLink>
             </div>

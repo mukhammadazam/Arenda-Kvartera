@@ -5,7 +5,7 @@
 
 .nav {
   padding: 30px 0;
-  &__logo{
+  &__logo {
     padding-right: 54px;
   }
   &__main {
@@ -36,7 +36,6 @@
     }
   }
   &__btn {
-
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
@@ -56,11 +55,60 @@
   max-width: 750px;
   width: 100%;
   position: absolute;
-  top: 0;
+  top: 0px;
   right: 0;
 }
-@media screen and (max-width:992px) {
-    .bg{
-        width: 50%;
+.bground {
+  background: #2b7af1;
+  height: 100vh;
+  position: absolute;
+  max-width: 300px;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  &__item {
+    padding-top: 50px;
+    text-align: center;
+  }
+  .item1 {
+    padding-top: 150px;
+  }
+}
+.minu-btn {
+  position: absolute;
+  right: 20px;
+  padding: 5px;
+}
+@media screen and (max-width: 992px) {
+  .nav__btn {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+  .bg {
+    width: 50%;
+  }
+  .nav__logo {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav {
+    &__btn{
+
+      display: none;
     }
+    &__link{
+      &--png{
+        padding: 0;
+      }
+    }
+  }
+  .bg{
+    width: 33%;
+    height: 15vh;
+  }
+ .minu-btn{
+  right: 80px;
+  z-index: 12;
+ }
 }
