@@ -1,0 +1,14 @@
+.nav {
+  padding: 30px 0;
+  &__main {
+    gap: 40px;
+    &--link {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #111111;
+    }
+  }
+}
