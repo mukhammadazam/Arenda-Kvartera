@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
 .nav {
   padding: 30px 0;
+  &__logo{
+    padding-right: 54px;
+  }
   &__main {
     gap: 40px;
     &--link {
@@ -11,4 +19,48 @@
       color: #111111;
     }
   }
+  &__link {
+    gap: 20px;
+    position: relative;
+    z-index: 11;
+    &--text {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #ffffff;
+    }
+    &--png {
+      padding-right: 10px;
+    }
+  }
+  &__btn {
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    background: linear-gradient(89.77deg, #ff7a00 0.2%, #ffb039 99.82%);
+    box-shadow: 0px 10px 20px rgba(255, 122, 0, 0.2);
+    border-radius: 25px;
+    padding: 15px 30px;
+  }
+}
+.bg {
+  background: #2b7af1;
+  border-radius: 0px 0px 0px 10px;
+  height: 100vh;
+  max-width: 750px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width:992px) {
+    .bg{
+        width: 50%;
+    }
 }

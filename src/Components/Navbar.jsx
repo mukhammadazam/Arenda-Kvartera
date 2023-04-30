@@ -2,48 +2,81 @@ import { Link, NavLink } from "react-router-dom";
 import telephone from "./images/telephone.svg";
 import Logo from "./images/Logo.svg";
 import Sms from "./images/sms.svg";
+import burger from "./images/menu.svg";
 import "./Navbar.scss";
+import { useState } from "react";
 const Navbar = () => {
+  const [minu, setMinu] = useState(false);
+  const minuFun = () => {
+     setMinu(!minu);
+console.log(minu)
+  };
   return (
     <div className='navbar'>
       <div className='container'>
         <div className='nav w-100 d-flex align-items-center justify-content-between'>
-          <div className='nav__main d-flex '>
-            <NavLink className='nav__main--logo'>
+          <div className=' d-flex align-items-center'>
+            <button
+              onClick={minuFun}
+              className='d-xl-none pe-4 border-0 bg-transparent d-lg-block'>
+              <img src={burger} alt='minubar' width='31' height='21' />
+            </button>
+            <NavLink className='nav__logo'>
               <img src={Logo} alt='logo' />
             </NavLink>
-            <NavLink className='text-decoration-none nav__main--link'>
-              Главная
-            </NavLink>
-            <NavLink className='text-decoration-none nav__main--link'>
-              Квартиры
-            </NavLink>
-            <NavLink className='text-decoration-none nav__main--link'>
-              Контакты
-            </NavLink>
-            <NavLink className='text-decoration-none nav__main--link'>
-              О нас
-            </NavLink>
+            <div className='nav__main d-none d-xl-flex  align-items-center '>
+              <NavLink className='text-decoration-none nav__main--link'>
+                Главная
+              </NavLink>
+              <NavLink className='text-decoration-none nav__main--link'>
+                Квартиры
+              </NavLink>
+              <NavLink className='text-decoration-none nav__main--link'>
+                Контакты
+              </NavLink>
+              <NavLink className='text-decoration-none nav__main--link'>
+                О нас
+              </NavLink>
+            </div>
           </div>
-          <div className='nav__link d-flex'>
+          <div className='nav__link d-flex align-items-center'>
             <NavLink className='text-decoration-none nav__link--item'>
               <img className='nav__link--png' src={Sms} alt='sms' />
-              <Link className='nav__link--text text-decoration-none'>
+              <span className='nav__link--text text-decoration-none'>
                 mail@yandex.ru
-              </Link>
+              </span>
             </NavLink>
             <NavLink className='text-decoration-none nav__link--item'>
               <img className='nav__link--png' src={telephone} alt='sms' />
-              <Link
+              <span
                 to='tel:998919509001'
                 className='nav__link--text text-decoration-none'>
                 +7 (919) 714-25-00
-              </Link>
+              </span>
             </NavLink>
-            <button type='submit' className='nav__btn border-0'>
+            <button type='submit' className='nav__btn d-block border-0'>
               Заказать звонок
             </button>
           </div>
+          <div className='bg'></div>
+          {minu ? (
+            <div className='nav__main d-block d-xl-none  align-items-center '>
+              <NavLink className='text-decoration-none d-block nav__main--link'>
+                Главная
+              </NavLink>
+              <NavLink className='text-decoration-none d-block nav__main--link'>
+                Квартиры
+              </NavLink>
+              <NavLink className='text-decoration-none d-block nav__main--link'>
+                Контакты
+              </NavLink>
+              <NavLink className='text-decoration-none d-block nav__main--link'>
+                О нас
+              </NavLink>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>
