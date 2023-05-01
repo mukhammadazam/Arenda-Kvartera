@@ -1,16 +1,16 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css'
-import Navbar from './Components/Navbar';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Hero from "./Components/Hero";
 function App() {
-
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <Routes>
-        <Route path='/'/>
+        <Route path='/' element={<Hero />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

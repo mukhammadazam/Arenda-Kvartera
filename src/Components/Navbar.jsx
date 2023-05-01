@@ -13,7 +13,7 @@ const Navbar = () => {
 console.log(minu)
   };
   return (
-    <div className='navbar'>
+    <div>
       <div className='container'>
         <div className='nav w-100 d-flex align-items-center justify-content-between'>
           <div className=' d-flex align-items-center'>
@@ -40,7 +40,10 @@ console.log(minu)
               </NavLink>
             </div>
           </div>
-          <div className='nav__link d-flex align-items-center'>
+          <div
+            className={`nav__link d-flex align-items-center ${
+              minu ? "navbar" : ""
+            }`}>
             <NavLink className='text-decoration-none d-flex  align-items-center nav__link--item'>
               <img className='nav__link--png' src={Sms} alt='sms' />
               <span className='nav__link--text d-none d-lg-block text-decoration-none'>
@@ -54,8 +57,8 @@ console.log(minu)
               </span>
             </NavLink>
             <button type='submit' className='nav__btn  border-0'>
-              <p className="d-none d-lg-block m-0"> Заказать звонок</p>
-              <p className="d-block d-lg-none m-0">Обратная связь</p>
+              <p className='d-none d-lg-block m-0'> Заказать звонок</p>
+              <p className='d-block d-lg-none m-0'>Обратная связь</p>
             </button>
           </div>
           <div className='bg'></div>
@@ -84,6 +87,7 @@ console.log(minu)
           )}
         </div>
       </div>
+      {}
     </div>
   );
 };
