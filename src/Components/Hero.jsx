@@ -3,7 +3,7 @@ import './Hero.scss'
 const Hero = () => {
   return (
     <div className='container'>
-      <div className=''>
+      <div className='hero'>
         {data.map((el, index) => (
           <div key={index} className=''>
             <img
@@ -11,6 +11,9 @@ const Hero = () => {
               src={el?.imgUrl}
               alt='hfd'
             />
+            <h1 className='hero__title'>{el?.title}</h1>
+            <p className='hero__text'>{el?.text}</p>
+            <btn className='hero__btn '>{el?.btnText}</btn>
           </div>
         ))}
       </div>

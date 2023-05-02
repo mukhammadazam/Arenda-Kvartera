@@ -3,14 +3,13 @@ import telephone from "./images/telephone.svg";
 import Logo from "./images/Logo.svg";
 import Sms from "./images/sms.svg";
 import burger from "./images/menu.svg";
-import eks from './images/eks.svg'
+import eks from "./images/eks.svg";
 import "./Navbar.scss";
 import { useState } from "react";
 const Navbar = () => {
   const [minu, setMinu] = useState(false);
   const minuFun = () => {
-     setMinu(!minu);
-console.log(minu)
+    setMinu(!minu);
   };
   return (
     <div>
@@ -19,7 +18,7 @@ console.log(minu)
           <div className=' d-flex align-items-center'>
             <button
               onClick={minuFun}
-              className='d-xl-none pe-4 border-0 bg-transparent d-lg-block'>
+              className='d-xxl-none pe-4 border-0 bg-transparent d-block'>
               <img src={burger} alt='minubar' width='31' height='21' />
             </button>
             <NavLink className='nav__logo'>
@@ -63,7 +62,7 @@ console.log(minu)
           </div>
           <div className='bg'></div>
           {minu ? (
-            <div className='nav__main bground d-block d-xl-none  align-items-center '>
+            <div className='nav__main bground d-block d-xxl-none  align-items-center '>
               <button
                 onClick={minuFun}
                 className='border-0 bg-transparent text-light  minu-btn  mt-5'>
