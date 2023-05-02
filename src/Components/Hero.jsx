@@ -16,8 +16,8 @@ const Hero = () => {
               alt='hfd'
             />
             <div className='hero__Enner'>
-              <h1 className='hero__title'>{el?.title}</h1>
-              <p className='hero__text'>{el?.text}</p>
+              <h1 className='hero__title '>{el?.title}</h1>
+              <p className='hero__text '>{el?.text}</p>
               <Link className='hero__btn text-light  text-decoration-none'>
                 {el?.btnText}
               </Link>
