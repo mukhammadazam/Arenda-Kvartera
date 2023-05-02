@@ -6,10 +6,12 @@
   font-family: "Open Sans";
   src: url(./fonts/OpenSans_Condensed-Regular.ttf);
 }
-.hero {
+.hero1 {
   max-width: 895px;
   width: 100%;
   display: block;
+}
+.hero {
   &__title {
     padding-top: 80px;
     max-width: 413px;
@@ -31,10 +33,43 @@
     padding-top: 20px;
   }
   &__btn {
-
+    color: white;
+    cursor: pointer;
     background: linear-gradient(89.77deg, #ff7a00 0.2%, #ffb039 99.82%);
     box-shadow: 0px 10px 20px rgba(255, 122, 0, 0.2);
     border-radius: 25px;
     padding: 15px 30px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .hero {
+  background: #11111180;
+filter: blur(50%);
+    &__title {
+      padding-top: 30px;
+      margin: 0 auto;
+      max-width: 400px;
+      font-size: 40px;
+      line-height: 40px;
+      text-align: center;
+    }
+    &__text {
+      text-align: center;
+      padding: 20px 0;
+      font-style: 20px;
+      margin: 0 auto;
+      color: white;
+    }
+  }
+
+  .hero__Enner {
+    position: absolute;
+  }
+}
+@media screen and (max-width: 900px) {
+  .hero {
+    &__title {
+      color: white;
+    }
   }
 }

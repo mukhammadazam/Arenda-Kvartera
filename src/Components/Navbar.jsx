@@ -5,9 +5,10 @@ import Sms from "./images/sms.svg";
 import burger from "./images/menu.svg";
 import eks from "./images/eks.svg";
 import "./Navbar.scss";
-import { useState } from "react";
+import { useContext } from "react";
+import { MyContext } from "./Context";
 const Navbar = () => {
-  const [minu, setMinu] = useState(false);
+ const {minu,setMinu}=useContext(MyContext)
   const minuFun = () => {
     setMinu(!minu);
   };
